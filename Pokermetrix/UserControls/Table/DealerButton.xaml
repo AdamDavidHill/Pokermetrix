@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="Pokermetrix.DealerButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="48" d:DesignWidth="48"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <UserControl.Resources>
+        <RadialGradientBrush x:Key="BBBrush"
+                             GradientOrigin="0.5,0.5" 
+                             Center="0.75,0.75" 
+                             RadiusX="1.75" 
+                             RadiusY="0.75">
+            <RadialGradientBrush.GradientStops>
+                <GradientStop Color="#FFFFFF66" Offset="1" />
+                <GradientStop Color="#FFCCCC11" Offset="0" />
+            </RadialGradientBrush.GradientStops>
+        </RadialGradientBrush>
+
+        <RadialGradientBrush x:Key="SBBrush"
+                             GradientOrigin="0.5,0.5" 
+                             Center="0.75,0.75" 
+                             RadiusX="1.75" 
+                             RadiusY="0.75">
+            <RadialGradientBrush.GradientStops>
+                <GradientStop Color="#FF3333CC" Offset="1" />
+                <GradientStop Color="#FF333399" Offset="0" />
+            </RadialGradientBrush.GradientStops>
+        </RadialGradientBrush>
+
+        <LinearGradientBrush x:Name="SBTextBrush" EndPoint="-0.347,0.624" StartPoint="0.917,0.439">
+            <GradientStop Color="#FFFFFFFF" Offset="1"/>
+            <GradientStop Color="#FFCCCCFF" Offset="0"/>
+        </LinearGradientBrush>
+    </UserControl.Resources>
+    
+    <Grid x:Name="LayoutRoot">
+        <Grid Visibility="{Binding SmallBlindVisibility}">
+            <Ellipse Fill="{StaticResource SBBrush}" />
+            <Ellipse Fill="{StaticResource CardBrush}" Opacity="0.1" />
+            <TextBlock Text="SB" 
+                       FontSize="20" 
+                       FontFamily="{StaticResource PhoneFontFamilySemiBold}" 
+                       Foreground="{StaticResource SBTextBrush}" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       />
+        </Grid>
+        <Grid Visibility="{Binding ExtraSmallBlindVisibility}" Margin="-30, 0, 30, 0">
+            <Ellipse Fill="{StaticResource SBBrush}" />
+            <Ellipse Fill="{StaticResource CardBrush}" Opacity="0.1" />
+            <TextBlock Text="SB" 
+                       FontSize="20" 
+                       FontFamily="{StaticResource PhoneFontFamilySemiBold}" 
+                       Foreground="{StaticResource SBTextBrush}" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       />
+        </Grid>        
+        <Grid Visibility="{Binding BigBlindVisibility}">
+            <Ellipse Fill="{StaticResource BBBrush}" />
+            <TextBlock Text="BB" 
+                       FontSize="20" 
+                       FontFamily="{StaticResource PhoneFontFamilySemiBold}" 
+                       Foreground="{StaticResource BlackBrush}" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       />
+        </Grid>
+        <Grid Visibility="{Binding DealerVisibility}">
+            <Ellipse Fill="White" />
+            <Ellipse Fill="{StaticResource CardBrush}" Opacity="0.3" />
+            <TextBlock Text="D" 
+                       FontSize="20" 
+                       FontFamily="{StaticResource PhoneFontFamilySemiBold}" 
+                       Foreground="{StaticResource BlackBrush}" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" 
+                       />
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Pokermetrix.LogoControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:local="clr-namespace:Pokermetrix"
+    xmlns:utils="clr-namespace:Pokermetrix.Utils"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="336" d:DesignWidth="691"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}">
+
+    <Grid x:Name="LayoutRoot" utils:Clip.ToBounds="True" Background="{StaticResource imageBrushBackground}">
+        <!--<local:Logo Margin="0,-160,0,0" RenderTransformOrigin="0.254,0.758" Width="600">
+            <local:Logo.RenderTransform>
+                <CompositeTransform Rotation="20"/>
+            </local:Logo.RenderTransform>
+        </local:Logo>
+        <local:Logo Margin="-350,-200,0,0" RenderTransformOrigin="0.254,0.758" Width="600">
+            <local:Logo.RenderTransform>
+                <CompositeTransform Rotation="20"/>
+            </local:Logo.RenderTransform>
+        </local:Logo>
+        <Grid>
+            <Viewbox>
+                <Viewbox.RenderTransform>
+                    <CompositeTransform Rotation="-33" TranslateX="-40" TranslateY="250" />
+                </Viewbox.RenderTransform>
+                <local:HandRankDiagram Width="99" Rank ="4" SuitClubVisibility="Visible"/>
+            </Viewbox>
+        </Grid>-->
+
+        <local:Logo Margin="0,-160,0,0" RenderTransformOrigin="0.254,0.758" Width="600">
+        </local:Logo>
+        <Grid>
+            <Viewbox>
+                <Viewbox.RenderTransform>
+                    <CompositeTransform Rotation="-53" TranslateX="-20" TranslateY="350" ScaleX="1.5" ScaleY="1.5" />
+                </Viewbox.RenderTransform>
+                <local:HandRankDiagram Width="99" Rank ="4" SuitClubVisibility="Visible"/>
+            </Viewbox>
+        </Grid>
+
+    </Grid>
+</UserControl>

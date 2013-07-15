@@ -1,0 +1,59 @@
+﻿<vm:SampleDataViewModel
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="clr-namespace:PokermetrixWP7">
+
+    <vm:SampleDataViewModel.HandRanks>
+        <vm:HandRank RankIndex="0" LineOne="Royal Flush" LineTwo="Maecenas praesent accumsan bibendum" LineThree="Maecenas praesent accumsan bibendum dictumst eleifend facilisi faucibus habitant inceptos interdum lobortis nascetur"/>
+        <vm:HandRank RankIndex="1" LineOne="Straight Flush" LineTwo="Dictumst eleifend facilisi faucibus" LineThree="Pharetra placerat pulvinar sagittis senectus sociosqu suscipit torquent ultrices vehicula volutpat maecenas praesent"/>
+        <vm:HandRank RankIndex="2" LineOne="Four of a Kind" LineTwo="Habitant inceptos interdum lobortis" LineThree="Accumsan bibendum dictumst eleifend facilisi faucibus habitant inceptos interdum lobortis nascetur pharetra placerat"/>
+        <vm:HandRank RankIndex="3" LineOne="Full House" LineTwo="Nascetur pharetra placerat pulvinar" LineThree="Pulvinar sagittis senectus sociosqu suscipit torquent ultrices vehicula volutpat maecenas praesent accumsan bibendum"/>
+        <vm:HandRank RankIndex="4" LineOne="Flush" LineTwo="Sagittis senectus sociosqu suscipit" LineThree="Dictumst eleifend facilisi faucibus habitant inceptos interdum lobortis nascetur pharetra placerat pulvinar sagittis"/>
+        <vm:HandRank RankIndex="5" LineOne="Straight" LineTwo="Torquent ultrices vehicula volutpat" LineThree="Senectus sociosqu suscipit torquent ultrices vehicula volutpat maecenas praesent accumsan bibendum dictumst eleifend"/>
+        <vm:HandRank RankIndex="6" LineOne="Three of a Kind" LineTwo="Torquent ultrices vehicula volutpat" LineThree="Senectus sociosqu suscipit torquent ultrices vehicula volutpat maecenas praesent accumsan bibendum dictumst eleifend"/>
+        <vm:HandRank RankIndex="7" LineOne="Two Pair" LineTwo="Torquent ultrices vehicula volutpat" LineThree="Senectus sociosqu suscipit torquent ultrices vehicula volutpat maecenas praesent accumsan bibendum dictumst eleifend"/>
+        <vm:HandRank RankIndex="8" LineOne="Pair" LineTwo="Torquent ultrices vehicula volutpat" LineThree="Senectus sociosqu suscipit torquent ultrices vehicula volutpat maecenas praesent accumsan bibendum dictumst eleifend"/>
+        <vm:HandRank RankIndex="9" LineOne="High Card" LineTwo="Torquent ultrices vehicula volutpat" LineThree="Senectus sociosqu suscipit torquent ultrices vehicula volutpat maecenas praesent accumsan bibendum dictumst eleifend"/>
+    </vm:SampleDataViewModel.HandRanks>
+
+    <vm:SampleDataViewModel.AboutItems>
+        <vm:HandRank RankIndex="0" LineOne="Purpose" LineTwo="Tells a player how playable a hand is in a particular situation" LineThree="Please use this tool responsibly"/>
+        <vm:HandRank RankIndex="1" LineOne="Selecting Cards" LineTwo="Tap the cards at the bottom to bring up the card selector" LineThree="Select two the cards which match your hand"/>
+        <vm:HandRank RankIndex="2" LineOne="Suitedness" LineTwo="Input whether the cards have the same suit using the lower right button" LineThree="Usually suited cards are better, but not always"/>
+        <vm:HandRank RankIndex="3" LineOne="Position" LineTwo="Tap the player equivalent to your seating position in relation to the dealer" LineThree="This is more important than it sounds"/>
+        <vm:HandRank RankIndex="4" LineOne="Profitability" LineTwo="Indicates your hand strength" LineThree="Takes into account all provided information"/>
+        <vm:HandRank RankIndex="5" LineOne="Bell Curves" LineTwo="These show the spread of hands along the profitability scale" LineThree="They do not take into account your cards"/>
+        <vm:HandRank RankIndex="6" LineOne="Hiding Cards" LineTwo="Press the Eye icon to hide / show cards" LineThree="Senectus sociosqu suscipit torquent ultrices vehicula volutpat maecenas praesent accumsan bibendum dictumst eleifend"/>
+        <vm:HandRank RankIndex="7" LineOne="The Data" LineTwo="This analysis is based on real data rather than stats" LineThree="Sometimes the results are surprising and counter-intuitive, but that's poker!"/>
+        <vm:HandRank RankIndex="8" LineOne="Contact" LineTwo="Any bugs or ideas for new features let me know!" LineThree="adam.hill@outlook.com"/>
+        <vm:HandRank RankIndex="9" LineOne="Review" LineTwo=""/>
+        <vm:HandRank RankIndex="10" LineOne="Sponsor" LineTwo="Powered by Dootrix"/>
+    </vm:SampleDataViewModel.AboutItems>
+
+    <vm:SampleDataViewModel.TableButtons>
+        <vm:DealerButton BigBlindVisibility="Collapsed"  SmallBlindVisibility="Visible"  ExtraSmallBlindVisibility="Collapsed"  DealerVisibility="Collapsed" />
+        <vm:DealerButton BigBlindVisibility="Visible"  SmallBlindVisibility="Collapsed"  ExtraSmallBlindVisibility="Collapsed"  DealerVisibility="Collapsed" />
+        <vm:DealerButton BigBlindVisibility="Collapsed"  SmallBlindVisibility="Collapsed"  ExtraSmallBlindVisibility="Collapsed"  DealerVisibility="Collapsed" />
+        <vm:DealerButton BigBlindVisibility="Collapsed"  SmallBlindVisibility="Collapsed"  ExtraSmallBlindVisibility="Collapsed"  DealerVisibility="Collapsed" />
+        <vm:DealerButton BigBlindVisibility="Collapsed"  SmallBlindVisibility="Collapsed"  ExtraSmallBlindVisibility="Collapsed"  DealerVisibility="Collapsed" />
+        <vm:DealerButton BigBlindVisibility="Collapsed"  SmallBlindVisibility="Collapsed"  ExtraSmallBlindVisibility="Collapsed"  DealerVisibility="Collapsed" />
+        <vm:DealerButton BigBlindVisibility="Collapsed"  SmallBlindVisibility="Collapsed"  ExtraSmallBlindVisibility="Collapsed"  DealerVisibility="Collapsed" />
+        <vm:DealerButton BigBlindVisibility="Collapsed"  SmallBlindVisibility="Collapsed"  ExtraSmallBlindVisibility="Collapsed"  DealerVisibility="Collapsed" />
+        <vm:DealerButton BigBlindVisibility="Collapsed"  SmallBlindVisibility="Collapsed"  ExtraSmallBlindVisibility="Collapsed"  DealerVisibility="Collapsed" />
+        <vm:DealerButton BigBlindVisibility="Collapsed"  SmallBlindVisibility="Collapsed"  ExtraSmallBlindVisibility="Collapsed"  DealerVisibility="Visible" />
+    </vm:SampleDataViewModel.TableButtons>
+
+    <vm:SampleDataViewModel.TablePlayers>
+        <vm:Player SelectedVisibility="Collapsed" UnselectedVisibility="Visible" />
+        <vm:Player SelectedVisibility="Collapsed" UnselectedVisibility="Visible" />
+        <vm:Player SelectedVisibility="Collapsed" UnselectedVisibility="Visible" />
+        <vm:Player SelectedVisibility="Collapsed" UnselectedVisibility="Visible" />
+        <vm:Player SelectedVisibility="Visible" UnselectedVisibility="Collapsed" />
+        <vm:Player SelectedVisibility="Collapsed" UnselectedVisibility="Visible" />
+        <vm:Player SelectedVisibility="Collapsed" UnselectedVisibility="Visible" />
+        <vm:Player SelectedVisibility="Collapsed" UnselectedVisibility="Visible" />
+        <vm:Player SelectedVisibility="Collapsed" UnselectedVisibility="Visible" />
+        <vm:Player SelectedVisibility="Collapsed" UnselectedVisibility="Visible" />
+    </vm:SampleDataViewModel.TablePlayers>
+    
+</vm:SampleDataViewModel>

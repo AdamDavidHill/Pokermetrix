@@ -1,0 +1,6 @@
+<MarketplaceDetails>
+  <SmallAppTile>ApplicationIcon300.png</SmallAppTile>
+  <ScreenShots>WVGAPreflopFold.png;WVGAPreflopGood.png;WVGAHeadsUpFold.png;WVGAHeadsUpShove.png;WVGAAbout.png;WVGAPreflopInstructions.png;WVGAHeadsUpInstructions.png;WVGAHandranks.png;</ScreenShots>
+  <ScreenShotsWXGA>WXGAPreflopFold.png;WXGAPreflopGood.png;WXGAHeadsUpFold.png;WXGAHeadsUpShove.png;WXGAAbout.png;WXGAPreflopInstructions.png;WXGAHeadsUpInstructions.png;WXGAHandranks.png;</ScreenShotsWXGA>
+  <ScreenShots720P>720PreflopFold.png;720PreflopGood.png;720HeadsUpFold.png;720HeadsUpGood.png;720About.png;720PreflopInstructions.png;720HeadsUpInstructions.png;720Handranks.png;</ScreenShots720P>
+</MarketplaceDetails>

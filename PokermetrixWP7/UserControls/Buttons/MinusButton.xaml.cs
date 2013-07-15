@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Navigation;
+using Microsoft.Phone.Controls;
+using Microsoft.Phone.Shell;
+using Microsoft.Devices;
+
+namespace PokermetrixWP7
+{
+    public partial class MinusButton : UserControl
+    {
+
+        public MinusButton()
+        {
+            InitializeComponent();
+        }
+
+        private void ButtonClicked(object sender, RoutedEventArgs e)
+        {
+            VibrateController.Default.Start(TimeSpan.FromMilliseconds(5));
+
+            if (OnClick != null)
+            {
+                OnClick(this, e);
+            }
+        }
+        public event EventHandler OnClick;
+    }
+}

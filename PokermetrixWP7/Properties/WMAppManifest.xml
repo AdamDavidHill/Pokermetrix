@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
+  <App xmlns="" ProductID="{681acd89-467f-4f67-ae00-9457fca9c2c0}" Title="Pokermetrix" RuntimeType="Silverlight" Version="1.0.0.1" Genre="apps.normal" Author="Adam Hill" Description="Texas Holdem Poker hand analysis tool. Significantly improves the odds of winning for beginner players by informing them whether a hand should be played or not." Publisher="Dootrix Ltd" BitsPerPixel="32">
+    <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
+    <Capabilities>
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="PokermetrixWP7Token" TaskName="_default">
+        <TemplateType5>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
+          <Count>0</Count>
+          <Title>Pokermetrix</Title>
+        </TemplateType5>
+      </PrimaryToken>
+    </Tokens>
+  </App>
+</Deployment>

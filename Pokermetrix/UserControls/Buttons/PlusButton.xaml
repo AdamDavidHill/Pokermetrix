@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Pokermetrix.PlusButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="75" d:DesignWidth="75"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    
+    <Grid x:Name="LayoutRoot">
+        <Button BorderThickness="0" 
+                Margin="0" 
+                Style="{StaticResource buttonScaleTransformStyle}"
+                Click="ButtonClicked">
+            <Grid>
+            <Viewbox>
+                    <Path x:Name="PathPlus" Data="F1M63.595,27.453C63.581,26.657 63.392,25.915 63.001,25.267 62.61,24.62 62.097,24.094 61.45,23.716 60.789,23.325 60.06,23.136 59.251,23.122L40.472,23.122 40.472,4.33C40.459,3.521 40.256,2.792 39.878,2.144 39.487,1.497 38.974,0.971 38.327,0.593 37.666,0.202 36.937,0 36.128,0L27.467,0C26.657,0 25.929,0.202 25.268,0.593 24.62,0.971 24.108,1.497 23.717,2.144 23.325,2.792 23.137,3.521 23.123,4.33L23.123,23.122 4.331,23.122C3.535,23.136 2.806,23.325 2.145,23.716 1.498,24.094 0.985,24.62 0.594,25.267 0.202,25.915 0.014,26.657 0,27.453L0,36.127C0.014,36.937 0.202,37.665 0.594,38.313 0.985,38.974 1.498,39.487 2.145,39.878 2.806,40.256 3.535,40.458 4.331,40.472L23.123,40.472 23.123,59.264C23.137,60.06 23.325,60.788 23.717,61.45 24.108,62.097 24.62,62.61 25.268,63.001 25.929,63.392 26.657,63.581 27.467,63.595L36.128,63.595C36.937,63.581 37.666,63.392 38.327,63.001 38.974,62.61 39.487,62.097 39.878,61.45 40.256,60.788 40.459,60.06 40.472,59.264L40.472,40.472 59.251,40.472C60.06,40.458 60.789,40.256 61.45,39.878 62.097,39.487 62.61,38.974 63.001,38.313 63.392,37.665 63.581,36.937 63.595,36.127z" Fill="White" UseLayoutRounding="False" Height="63.595" Canvas.Left="11.792" Canvas.Top="9.089" Width="63.595"/>
+            </Viewbox>
+            </Grid>
+        </Button>
+    </Grid>
+</UserControl>

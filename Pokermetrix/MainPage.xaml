@@ -1,0 +1,115 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Pokermetrix.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Pokermetrix"    
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+    <phone:PhoneApplicationPage.Resources>
+
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+
+        <!-- LOCALIZATION NOTE:
+            To localize the displayed strings copy their values to appropriately named
+            keys in the app's neutral language resource file (AppResources.resx) then
+            replace the hard-coded text value between the attributes' quotation marks
+            with the binding clause whose path points to that string name.
+
+            For example:
+
+                Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}"
+
+            This binding points to the template's string resource named "ApplicationTitle".
+
+            Adding supported languages in the Project Properties tab will create a
+            new resx file per language that can carry the translated values of your
+            UI strings. The binding in these examples will cause the value of the
+            attributes to be drawn from the .resx file that matches the
+            CurrentUICulture of the app at run time.
+         -->
+        
+
+        <!--Panorama control-->
+        <phone:Panorama Background="{StaticResource imageBrushBackground}">
+            
+            <phone:Panorama.Title>
+                <StackPanel Orientation="Vertical" Margin="0,45,0,0">
+                    <Image x:Name="icon" Source="/Assets/PlainPokermetrixLogo.png" />
+                </StackPanel>
+            </phone:Panorama.Title>
+
+            <!-- About -->
+            <phone:PanoramaItem Header="about" Foreground="Gray">
+                <phone:PanoramaItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}"
+                                   FontSize="22"
+                                   Margin="0,0,0,-20"
+                                   />
+                    </DataTemplate>
+                </phone:PanoramaItem.HeaderTemplate>
+
+                <local:About />
+            </phone:PanoramaItem>
+
+            <!-- Pre-flop profitability -->
+            <phone:PanoramaItem Header="pre-flop profitability" Foreground="Gray">
+                <phone:PanoramaItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}"
+                                   FontSize="22"
+                                   Margin="0,0
+                                   ,0,-20"
+                                   />
+                    </DataTemplate>
+                </phone:PanoramaItem.HeaderTemplate>
+
+                <Grid>
+                    <local:PreflopProfitabilityControl x:Name="preflopProfitabilityControl" />
+                </Grid>
+            </phone:PanoramaItem>
+
+            <!-- Heads up -->
+            <phone:PanoramaItem Header="heads up shove/fold strategy" Foreground="Gray">
+                <phone:PanoramaItem.HeaderTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}"
+                                   FontSize="22"
+                                   Margin="0,0
+                                   ,0,-20"
+                                   />
+                    </DataTemplate>
+                </phone:PanoramaItem.HeaderTemplate>
+
+                <Grid>
+                    <local:HeadsUpControl x:Name="headsUpControl" />
+                </Grid>
+            </phone:PanoramaItem>
+            
+            <!-- Hand Ranks -->
+            <phone:PanoramaItem>
+                <local:HandRankControl />
+            </phone:PanoramaItem>
+
+        </phone:Panorama>
+
+        <local:CardPicker x:Name="cardPickerControl" Visibility="Collapsed" Grid.RowSpan="2" Background="Black" />
+        <local:CardPicker x:Name="cardPickerControlHeadsUp" Visibility="Collapsed" Grid.RowSpan="2" Background="Black" />
+        <local:AdjustmentPicker x:Name="adjustmentPicker" Visibility="Collapsed" Grid.RowSpan="2" Background="Black" />
+        <local:HeadsUpInstructions x:Name="headsUpInfo" Visibility="Collapsed" Grid.RowSpan="2" Background="Black" />
+        <local:PreflopProfitabilityInstructions x:Name="preflopProfitabilityInfo" Visibility="Collapsed" Grid.RowSpan="2" Background="Black" />
+    </Grid>
+</phone:PhoneApplicationPage>

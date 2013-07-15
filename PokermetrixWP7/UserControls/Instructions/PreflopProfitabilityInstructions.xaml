@@ -1,0 +1,251 @@
+﻿<UserControl x:Class="PokermetrixWP7.PreflopProfitabilityInstructions"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:PokermetrixWP7"    
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="1300" d:DesignWidth="420"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    IsHitTestVisible="False"
+    x:Name="self">
+    <UserControl.Resources>
+        <Storyboard x:Name="fadeIn">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity"
+                                           Storyboard.TargetName="self">
+                <EasingDoubleKeyFrame Value="0.0" KeyTime="0:0:0"/>
+                <EasingDoubleKeyFrame Value="1.0" KeyTime="0:0:0.6">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="fadeOut">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity"
+                                           Storyboard.TargetName="self">
+                <EasingDoubleKeyFrame Value="1.0" KeyTime="0:0:0"/>
+                <EasingDoubleKeyFrame Value="0.0" KeyTime="0:0:0.3">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseIn"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <ScrollViewer Background="{StaticResource imageBrushBackground}">
+
+        <Grid Margin="0,24,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="1" Margin="0,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="Purpose" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White"
+                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                           />
+                    <TextBlock Text="Pokermetrix shows how playable a hand is in a particular situation." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="Inexperienced players are prone to playing weak hands which drastically impacts their odds of winning."
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="Note: This app is based on a large set of real data, not calculated odds, so sometimes the results are counter-intuitive and may surprise you!"
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                </StackPanel>
+                <Image Grid.Column="1" 
+                                               VerticalAlignment="Top" 
+                                   Source="../../Assets/ProfitabilityFold.png"
+                                               Margin="0,40,0,0"
+                                               />
+            </Grid>
+
+            <Grid Grid.Row="2" Margin="0,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="Instructions" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White" 
+                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                           />
+                    <TextBlock Text="1. Select number of players" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="2. Tap your seat relative to dealer" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="3. Tap the cards to deal" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="4. Say whether your hands are suited"
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="5. Check the results"
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="6. Hide the data from other players"
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                </StackPanel>
+                <Image Grid.Column="1" 
+                                               VerticalAlignment="Top" 
+                                   Source="../../Assets/ProfitabilityInstructions.png"
+                                               Margin="0,40,0,0"
+                                               />
+            </Grid>
+
+<!--            <Grid Grid.Row="3" Margin="0,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="Reading the Chart" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White" 
+                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                           />
+                    <TextBlock Text="The coloured bar shows your hand strength. Positive is playable." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="The curves show the distribution of all hands over the profitability scale." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                </StackPanel>
+                <Image Grid.Column="1" 
+                                               VerticalAlignment="Top" 
+                                   Source="../../Assets/Chart.png"
+                                               Margin="0,40,0,0"
+                                               />
+                <Image Grid.Column="1" 
+                                               VerticalAlignment="Top" 
+                                   Source="../../Assets/Chart2.png"
+                                               Margin="0,80,0,0"
+                                               />
+                <Image Grid.Column="1" 
+                                               VerticalAlignment="Top" 
+                                   Source="../../Assets/Chart3.png"
+                                               Margin="0,120,0,0"
+                                               />
+            </Grid>-->
+
+            <Grid Grid.Row="4" Margin="0,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="Tips" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White" 
+                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                           />
+                    <TextBlock Text="In general use this information when the action is on you and nobody has raised. If someone has already raised then proceed with caution, bearing in mind what you know about that player. In this case, and if the hand was borderline profitable, it may be wise to fold." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="To improve your own play in general pick some hands at random and try and guess what the app will tell you. This can be a simple way of learning what hands to play given the number of players and seating position." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="This can also given an excellent visual demonstration of the power of (seating) position. Pick a marginal hand and adjust the seat - notice how later seats and especially the dealer usually have vastly better profitability." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="5" Margin="0,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White" 
+                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                           />
+                    <TextBlock Text="Tap the back button to return to the app."
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           Foreground="White"
+                                           />
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

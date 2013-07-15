@@ -1,0 +1,255 @@
+﻿<UserControl x:Class="Pokermetrix.HeadsUpInstructions"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Pokermetrix"    
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="1800" d:DesignWidth="420"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    IsHitTestVisible="False"
+    x:Name="self">
+    <UserControl.Resources>
+        <Storyboard x:Name="fadeIn">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity"
+                                           Storyboard.TargetName="self">
+                <EasingDoubleKeyFrame Value="0.0" KeyTime="0:0:0"/>
+                <EasingDoubleKeyFrame Value="1.0" KeyTime="0:0:0.6">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Name="fadeOut">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity"
+                                           Storyboard.TargetName="self">
+                <EasingDoubleKeyFrame Value="1.0" KeyTime="0:0:0"/>
+                <EasingDoubleKeyFrame Value="0.0" KeyTime="0:0:0.3">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseIn"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+
+    <ScrollViewer Background="{StaticResource imageBrushBackground}">
+        
+        <Grid Margin="0,24,12,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="1" Margin="0,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="Purpose" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White"
+                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                           />
+                    <TextBlock Text="Heads Up Shove/Fold strategy is a simple but effective strategy for playing when you're especially short of chips. I find this useful for increasing my chances of making a comeback when heads up." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="When the hand is sufficiently strong in that context the players goes All In (shoves), otherwise they fold. This is both very difficult for an opponent to read and hard to combat, at least if they're not expecting it." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="Note: This is based on Nash Equilibrium."
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                </StackPanel>
+                <Image Grid.Column="1" 
+                                               VerticalAlignment="Top" 
+                                   Source="../../Assets/HeadsUpShove.png"
+                                               Margin="0,40,0,0"
+                                               />
+            </Grid>
+
+            <Grid Grid.Row="2" Margin="0,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="Instructions" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White" 
+                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                           />
+                    <TextBlock Text="1. Say if the opponent is already All In" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="2. Input your stack size" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="3. Input the Big Blind size" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="4. Input your cards"
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="5. Say whether your hands are suited"
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="6. Check the chart for results"
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />                    
+                    <TextBlock Text="7. Hide the data from other players"
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                </StackPanel>
+                <Image Grid.Column="1" 
+                                               VerticalAlignment="Top" 
+                                   Source="../../Assets/HeadsUpInstructions.png"
+                                               Margin="0,40,0,0"
+                                               />
+            </Grid>
+
+            <Grid Grid.Row="3" Margin="0,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="Reading the Chart" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White" 
+                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                           />
+                    <TextBlock Text="The coloured bar shows your hand strength." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="The vertical white bar is the shove/fold threshold." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="A hand strength greater than the threshold means shove, less than or equal means fold." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                <Image Grid.Column="1" 
+                                               VerticalAlignment="Top" 
+                                   Source="../../Assets/HeadsUpChartShove.png"
+                                               Margin="0,40,0,0"
+                                               />
+                <Image Grid.Column="1" 
+                                               VerticalAlignment="Top" 
+                                   Source="../../Assets/HeadsUpChartFold.png"
+                                               Margin="0,16,0,0"
+                                               />
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="0" Margin="0,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="Tip" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White" 
+                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                           />
+                    <TextBlock Text="I would recommend employing this strategy when you have about 8 blinds left or less, and mixing up your strategy above this."
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           Foreground="White"
+                                           />
+                    <TextBlock Text="Using this strategy when you have about 10 or more blinds remaining is risky." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="4" Margin="0,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White" 
+                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                           />
+                    <TextBlock Text="Tap the back button to return to the app."
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           Foreground="White"
+                                           />
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+    </ScrollViewer>
+</UserControl>

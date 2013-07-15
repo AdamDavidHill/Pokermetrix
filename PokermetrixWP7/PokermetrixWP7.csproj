@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{681ACD89-467F-4F67-AE00-9457FCA9C2C0}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PokermetrixWP7</RootNamespace>
+    <AssemblyName>Pokermetrix</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>en-GB</SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>PokermetrixWP7.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>PokermetrixWP7.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Expression.Controls, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+    <Reference Include="mscorlib.extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Vector.cs" />
+    <Compile Include="DataAnalysis\EVAnalysis.cs" />
+    <Compile Include="DataAnalysis\EVData.cs" />
+    <Compile Include="DataAnalysis\NashEQAnalysis.cs" />
+    <Compile Include="DataAnalysis\NashEQData.cs" />
+    <Compile Include="Localisation\LocalizedStrings.cs" />
+    <Compile Include="Logo.xaml.cs">
+      <DependentUpon>Logo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Card.cs" />
+    <Compile Include="Model\Hand.cs" />
+    <Compile Include="Model\HandRank.cs" />
+    <Compile Include="Pages\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HandRankControl.xaml.cs">
+      <DependentUpon>HandRankControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HeadsUpControl.xaml.cs">
+      <DependentUpon>HeadsUpControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LogoControl.xaml.cs">
+      <DependentUpon>LogoControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PreflopProfitabilityControl.xaml.cs">
+      <DependentUpon>PreflopProfitabilityControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs" />
+    <Compile Include="SampleData\SampleDataViewModel.cs" />
+    <Compile Include="UserControls\Buttons\AddRemovePlayerButton.xaml.cs">
+      <DependentUpon>AddRemovePlayerButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Buttons\HideShowButton.xaml.cs">
+      <DependentUpon>HideShowButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Buttons\InfoButton.xaml.cs">
+      <DependentUpon>InfoButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Buttons\IsSuitedButton.xaml.cs">
+      <DependentUpon>IsSuitedButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Buttons\MinusButton.xaml.cs">
+      <DependentUpon>MinusButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Buttons\PlusButton.xaml.cs">
+      <DependentUpon>PlusButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Cards\CardButton.xaml.cs">
+      <DependentUpon>CardButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Cards\CardVisual.xaml.cs">
+      <DependentUpon>CardVisual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Hands\HandRankDiagram.xaml.cs">
+      <DependentUpon>HandRankDiagram.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Instructions\HeadsUpInstructions.xaml.cs">
+      <DependentUpon>HeadsUpInstructions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Instructions\PreflopProfitabilityInstructions.xaml.cs">
+      <DependentUpon>PreflopProfitabilityInstructions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Pickers\AdjustmentPicker.xaml.cs">
+      <DependentUpon>AdjustmentPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Pickers\CardPicker.xaml.cs">
+      <DependentUpon>CardPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Scrapbook\ScrapBook.xaml.cs">
+      <DependentUpon>ScrapBook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Table\DealerButton.xaml.cs">
+      <DependentUpon>DealerButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Table\Player.xaml.cs">
+      <DependentUpon>Player.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Clip.cs" />
+    <Compile Include="Util\ColourUtil.cs" />
+    <Compile Include="Util\HandRankFactory.cs" />
+    <Compile Include="Util\HandUtil.cs" />
+    <Compile Include="Util\MathUtil.cs" />
+    <Compile Include="Util\ParseUtil.cs" />
+    <Compile Include="Util\PositionUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Logo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\About.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\HandRankControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\HeadsUpControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\LogoControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\PreflopProfitabilityControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\MainViewModelSampleData.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Buttons\AddRemovePlayerButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Buttons\HideShowButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Buttons\InfoButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Buttons\IsSuitedButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Buttons\MinusButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Buttons\PlusButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Cards\CardButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Cards\CardVisual.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Hands\HandRankDiagram.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Instructions\HeadsUpInstructions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Instructions\PreflopProfitabilityInstructions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Pickers\AdjustmentPicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Pickers\CardPicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Scrapbook\ScrapBook.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Table\DealerButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\Table\Player.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ApplicationIcon300.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Chart.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Chart2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Chart3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\HeadsUpChartFold.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\HeadsUpChartShove.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\HeadsUpFold.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\HeadsUpInstructions.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\HeadsUpShove.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\PlainPokermetrixLogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\PokermetrixBkg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\PoweredByDootrix.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ProfitabilityFold.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ProfitabilityInstructions.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ProfitabilityPlay.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png" />
+    <Content Include="Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dll\System.Windows.Controls.DataVisualization.Toolkit.dll" />
+    <Content Include="dll\System.Windows.Controls.dll" />
+    <Content Include="SplashScreenImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.en-GB.resx" />
+    <EmbeddedResource Include="Resources\AppResources.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+</Project>

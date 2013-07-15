@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Pokermetrix.MinusButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="75" d:DesignWidth="75"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    
+    <Grid x:Name="LayoutRoot">
+        <Button BorderThickness="0" 
+                Margin="0" 
+                Style="{StaticResource buttonScaleTransformStyle}"
+                Click="ButtonClicked">
+            <Grid>
+            <Viewbox>
+                    <Path x:Name="PathMinus" Data="F1M63.595,4.344C63.581,3.534 63.393,2.806 63.001,2.145 62.611,1.497 62.098,0.985 61.449,0.594 60.789,0.216 60.061,0.013 59.251,0L4.331,0C3.535,0.013 2.806,0.216 2.145,0.594 1.498,0.985 0.985,1.497 0.594,2.145 0.203,2.806 0.014,3.534 0,4.344L0,13.005C0.014,13.815 0.203,14.543 0.594,15.204 0.985,15.851 1.498,16.364 2.145,16.756 2.806,17.147 3.535,17.335 4.331,17.349L59.251,17.349C60.061,17.335 60.789,17.147 61.449,16.756 62.098,16.364 62.611,15.851 63.001,15.204 63.393,14.543 63.581,13.815 63.595,13.005z" Fill="White" UseLayoutRounding="False" Height="17.349" Canvas.Left="11.792" Canvas.Top="32.212" Width="63.595"/>
+            </Viewbox>
+            </Grid>
+        </Button>
+    </Grid>
+</UserControl>

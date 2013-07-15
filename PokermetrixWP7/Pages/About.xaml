@@ -1,0 +1,260 @@
+﻿<UserControl x:Class="PokermetrixWP7.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:PokermetrixWP7"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="2000" d:DesignWidth="420">
+
+    <ScrollViewer>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0" Margin="12,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="Purpose" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White"
+                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                           />
+                    <TextBlock Text="Pokermetrix is a Texas Holdem Poker tool which brings an immediate improvement to less experienced players by helping them avoid unprofitable hands and situations pre-flop. It has been carefully designed for touch input speed so that it could be used in a game situation with minimal time impact." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="It also features a Heads Up Shove/Fold Strategy advisor, which is based on optimal Nash Equilibrium play."
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="DISCLAIMER: We accept no responsibility for how you use this app or the recommendations it gives. Luck is always a factor in poker, and there are significant human factors involved."
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           Foreground="White"
+                                           />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Vertical">
+                    <Image 
+                                               VerticalAlignment="Top" 
+                                   Source="../Assets/ProfitabilityPlay.png"
+                                               Margin="0,40,0,0"
+                                               />
+                    <Image 
+                                               VerticalAlignment="Top" 
+                                   Source="../Assets/HeadsUpFold.png"
+                                               Margin="0,40,0,0"
+                                               />
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="1" Margin="12,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="Getting started" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White"
+                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                           />
+                    <TextBlock Text="Swipe left and right to browse the app pages." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="Look out for the icon on the right for page instructions."
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                </StackPanel>
+                <local:InfoButton Grid.Column="1" 
+                                  Width="75" 
+                                  Height="75" 
+                                  HorizontalAlignment="Center" 
+                                  IsEnabled="False"
+                                  />
+            </Grid>
+
+            <Grid Grid.Row="3" Margin="12,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="Contact" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White" 
+                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                           />
+                    <TextBlock Text="Your feedback is really helpful!" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="Please send me your ideas, any bugs or even stories of how you got on with this app:"
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <Button x:Name="EmailButton"
+                                                 Content="Email my Feedback"
+                                                 Click="EmailButton_Click"
+                                                Margin="10,5,10,0" 
+                                           />
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="5" Margin="12,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="Version + History" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White" 
+                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                           />
+                    <TextBlock Text="Pokermetrix v1.0.0.1 by Adam Hill" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="Initial release."
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="4" Margin="12,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="Rate / Review" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White" 
+                                           FontSize="{StaticResource PhoneFontSizeLarge}" 
+                                           />
+                    <TextBlock Text="Ratings and reviews are a great way to help the developers:"
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <Button x:Name="ReviewButton"
+                                                 Content="Rate / Review"
+                                                 Click="ReviewButton_Click"
+                                                 FontSize="24"
+                                                Margin="10,5,10,0" 
+                                           />
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="7" Margin="12,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <Button BorderBrush="Transparent" Click="Button_Click">
+                        <Button.Content>
+                            <Image Source="../Assets/PoweredByDootrix.png"
+                                           Margin="10,5,10,0" 
+                                           />
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Row="6" Margin="12,0,0,38">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Margin="8,-7,0,0">
+                    <TextBlock Text="LIVE Mode" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,0" 
+                                           Foreground="White" 
+                                           />
+                    <TextBlock Text="Turn this on if you're playing in a game and don't want your phone to lock itself after a few seconds." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <TextBlock Text="WARNING: Keep an eye on your battery. Whilst power consumption for this app is low, this will have an effect." 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           Foreground="#FFD10201"
+                                           />
+                    <TextBlock x:Name="LiveModeText"
+                                           Text="LIVE mode is OFF" 
+                                           TextWrapping="Wrap" 
+                                           Margin="10,5,10,0" 
+                                           FontSize="17" 
+                                           />
+                    <local:IsSuitedButton x:Name="LiveModeButton"
+                                                      IsChecked="False"
+                                                      OnClick="LiveModeButton_OnClick"
+                                                      Width="75"
+                                                      Height="75"
+                                           Margin="10,5,10,0" 
+                                           FontSize="24"
+                                           />
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

@@ -1,0 +1,126 @@
+﻿<UserControl x:Class="PokermetrixWP7.HandRankDiagram"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:PokermetrixWP7"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480" Height="99" Width="99"
+	Background="#FFD4A11B">
+    
+    <Canvas x:Name="LayoutRoot">
+		<!-- 1 -->
+		<local:CardVisual x:Name="card1"
+                          Margin="0,0,0,0" 
+						Width="100"
+						Height="140" 
+						BackVisibility="Collapsed" 
+						CardValueFull="" 
+						CardValueShort="" 
+						ClubVisibility="Collapsed"
+						HeartVisibility="Collapsed"
+						DiamondVisibility="Collapsed"
+						SpadeVisibility="Collapsed"
+						SmallClubVisibility="Visible"
+						SmallHeartVisibility="Collapsed"
+						SmallDiamondVisibility="Collapsed"
+						SmallSpadeVisibility="Collapsed"
+						RenderTransformOrigin="0,2"
+                        IsEnabled="False">
+			<local:CardVisual.RenderTransform>
+				<CompositeTransform TranslateX="0" TranslateY="-180" Rotation="0" ScaleX="0.35" ScaleY="0.35"/>					
+			</local:CardVisual.RenderTransform>
+		</local:CardVisual>
+		<!-- 2 -->
+        <local:CardVisual x:Name="card2"
+                          Margin="0,0,0,0" 
+						Width="100"
+						Height="140" 
+						BackVisibility="Collapsed" 
+						CardValueFull="" 
+						CardValueShort="" 
+						ClubVisibility="Collapsed"
+						HeartVisibility="Collapsed"
+						DiamondVisibility="Collapsed"
+						SpadeVisibility="Collapsed"
+						SmallClubVisibility="Visible"
+						SmallHeartVisibility="Collapsed"
+						SmallDiamondVisibility="Collapsed"
+						SmallSpadeVisibility="Collapsed"
+						RenderTransformOrigin="0,2"
+                        IsEnabled="False">
+			<local:CardVisual.RenderTransform>
+				<CompositeTransform TranslateX="0" TranslateY="-180" Rotation="15" ScaleX="0.35" ScaleY="0.35"/>					
+			</local:CardVisual.RenderTransform>
+		</local:CardVisual>
+		<!-- 3 -->
+        <local:CardVisual x:Name="card3" 
+                          Margin="0,0,0,0" 
+						Width="100"
+						Height="140" 
+						BackVisibility="Collapsed" 
+						CardValueFull="" 
+						CardValueShort="" 
+						ClubVisibility="Collapsed"
+						HeartVisibility="Collapsed"
+						DiamondVisibility="Collapsed"
+						SpadeVisibility="Collapsed"
+						SmallClubVisibility="Visible"
+						SmallHeartVisibility="Collapsed"
+						SmallDiamondVisibility="Collapsed"
+						SmallSpadeVisibility="Collapsed"
+						RenderTransformOrigin="0,2"
+                        IsEnabled="False">
+			<local:CardVisual.RenderTransform>
+				<CompositeTransform TranslateX="0" TranslateY="-180" Rotation="30" ScaleX="0.35" ScaleY="0.35"/>					
+			</local:CardVisual.RenderTransform>
+		</local:CardVisual>
+		<!-- 4 -->
+        <local:CardVisual x:Name="card4"
+                          Margin="0,0,0,0" 
+						Width="100"
+						Height="140" 
+						BackVisibility="Collapsed" 
+						CardValueFull="" 
+						CardValueShort="" 
+						ClubVisibility="Collapsed"
+						HeartVisibility="Collapsed"
+						DiamondVisibility="Collapsed"
+						SpadeVisibility="Collapsed"
+						SmallClubVisibility="Visible"
+						SmallHeartVisibility="Collapsed"
+						SmallDiamondVisibility="Collapsed"
+						SmallSpadeVisibility="Collapsed"
+						RenderTransformOrigin="0,2"
+                        IsEnabled="False">
+			<local:CardVisual.RenderTransform>
+				<CompositeTransform TranslateX="0" TranslateY="-180" Rotation="45" ScaleX="0.35" ScaleY="0.35"/>					
+			</local:CardVisual.RenderTransform>
+		</local:CardVisual>
+		<!-- 5 -->
+        <local:CardVisual x:Name="card5"
+                          Margin="0,0,0,0" 
+						Width="100"
+						Height="140" 
+						BackVisibility="Collapsed" 
+						CardValueFull="" 
+						CardValueShort="" 
+						ClubVisibility="Collapsed"
+						HeartVisibility="Collapsed"
+						DiamondVisibility="Collapsed"
+						SpadeVisibility="Collapsed"
+						SmallClubVisibility="Visible"
+						SmallHeartVisibility="Collapsed"
+						SmallDiamondVisibility="Collapsed"
+						SmallSpadeVisibility="Collapsed"
+						RenderTransformOrigin="0,2"
+                        IsEnabled="False">
+			<local:CardVisual.RenderTransform>
+				<CompositeTransform TranslateX="0" TranslateY="-180" Rotation="60" ScaleX="0.35" ScaleY="0.35"/>					
+			</local:CardVisual.RenderTransform>
+		</local:CardVisual>
+	</Canvas>
+</UserControl>
